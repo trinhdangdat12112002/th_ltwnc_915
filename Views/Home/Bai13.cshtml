@@ -1,0 +1,40 @@
+@{
+    ViewData["Title"] = "Bài 13";
+}
+
+@section Scripts {
+    <script>
+        const runPrompt = () => {
+            const text = prompt("Hãy nhập một đoạn văn bản", "");
+
+            if (!text) {
+                alert("Bạn chưa nhập gì!")
+            } else {
+
+                const { minWords, maxWords } = getWord(text || "")
+
+                alert(`Từ ngắn nhất bạn đã nhập:\n${minWords.join(", ")}\nTừ dài nhất bạn đã nhập:\n${maxWords.join(", ")}\n`);
+            }
+
+            if (confirm("Bạn có muốn tiếp tục?")) {
+                runPrompt()
+            }
+        }
+
+        const getWord = (text) => {
+            const words = text.split(" ").sort((w1, w2) => w1.length - w2.length);
+
+            const minWords = words.filter(w => w.length == words[0].length);
+            const maxWords = words.filter(w => w.length == words[words.length - 1].length);
+
+            return { minWords, maxWords }
+        }
+
+        runPrompt()
+    </script>
+}
+
+<div class="text-center">
+    <h1>Bài 13 View</h1>
+    <button onclick="runPrompt()">Run Prompt</button>
+</div>

@@ -1,0 +1,17 @@
+﻿@model Author
+
+<h2>Delete Author</h2>
+
+@if (Model == null)
+{
+    <h2>Author nay mat tich roi</h2>
+}
+else
+{
+    <form asp-controller="Home" asp-action="DeleteAuthor" method="post">
+        <input type="hidden" asp-for="Id" />
+        <p>Are you sure you want to delete this author? @Model.Id</p>
+        <button type="submit">Delete</button>
+    </form>
+}
+<a asp-action="Index">Back to list</a>

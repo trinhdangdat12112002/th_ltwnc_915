@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="App_Data\Bai15\UserData_20240117215435.xml" />
+    <Content Include="App_Data\Bai16\KQHT.20A4.pdf" />
+    <Content Include="App_Data\Bai16\NguyenVanThienTam_EmbeddedEngineer_CV.pdf" />
+    <Content Include="App_Data\Bai16\TB2 Hướng dẫn đầu vào chuyên ngành.pdf" />
+    <Content Include="App_Data\Bai16\TB2-Hướng-dẫn-đầu-vào-chuyên-ngành.pdf" />
+    <Content Include="App_Data\Bai16\Tet o lang Dia Nguc - Thao Trang.pdf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Grpc.Core" Version="2.46.6" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+</Project>

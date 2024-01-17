@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Bai15 Form";
+}
+
+<form asp-action="Index" method="POSt">
+    <label for="hoTen">Họ tên:</label>
+    <input type="text" id="hoTen" name="hoTen"><br>
+
+    <label for="ngaySinh">Ngày sinh:</label>
+    <input type="date" id="ngaySinh" name="ngaySinh" ><br>
+
+    <label for="gioiTinh">Giới tính:</label>
+    <select id="gioiTinh" name="gioiTinh" >
+        <option value="nam">Nam</option>
+        <option value="nu">Nữ</option>
+    </select><br>
+
+    <button type="submit">Gửi</button>
+</form>

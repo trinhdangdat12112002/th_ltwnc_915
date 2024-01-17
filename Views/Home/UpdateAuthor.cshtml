@@ -1,0 +1,20 @@
+﻿@model Author
+
+<h2>Update Author</h2>
+
+<form asp-controller="Home" asp-action="UpdateAuthor" method="post">
+    <div>
+        <label asp-for="sFirstName">First Name:</label>
+        <input asp-for="sFirstName" class="form-control " value="@Model.sFirstName" />
+        <span asp-validation-for="sFirstName" class="text-danger"></span>
+    </div>
+    <br>
+    <div>
+        <label asp-for="sLastName">Last Name:</label>
+        <input asp-for="sLastName" class="form-control" value="@Model.sLastName" />
+        <span asp-validation-for="sLastName" class="text-danger"></span>
+    </div>
+    <br>
+    <button type="submit">Update</button>
+</form>
+<a asp-action="Index">Back to list</a>

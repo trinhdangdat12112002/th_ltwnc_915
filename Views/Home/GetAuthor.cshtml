@@ -1,0 +1,17 @@
+﻿@model Author
+
+<h2>Author Information</h2>
+
+@if (Model != null)
+{
+    <dl>
+        <dt>ID : </dt>
+        <dd>@Model.Id</dd>
+
+        <dt>First Name : </dt>
+        <dd>@Model.sFirstName</dd>
+
+        <dt>Last Name : </dt>
+        <dd>@Model.sLastName</dd>
+    </dl>
+}

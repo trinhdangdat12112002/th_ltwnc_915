@@ -1,0 +1,43 @@
+﻿@model BMIModel
+
+<div class="text-center">
+    <h1>BMI View</h1>
+    <form method="post" asp-controller="BMI" asp-action="Index" class="form" 
+    style="
+        width: 500px;
+        padding: 12px;
+        border: 1px solid #000;
+        position: relative;
+        left: 32%;
+    
+    ">
+        <div style="margin-top : 8px">
+            <div>
+                <label>Chiều cao</label>
+                <input asp-for="height"  />
+                <label>m</label>
+            </div>
+            <div>
+                <span asp-validation-for="height" class="text-danger"></span>
+            </div>
+        <div style="margin-top : 8px">
+            <div>
+                <label>Cân nặng</label>
+                <input asp-for="weight" />
+                <label>kg</label>
+            </div>
+            <div>
+                <span asp-validation-for="weight" class="text-danger"></span>
+            </div>
+        <div style="margin-top : 10px " >
+            @if (@ViewData["Result"] != null)
+            {
+                <strong>@ViewData["Result"]</strong>
+            }
+        </div>
+        <button type="submit">Thực hiện</button>
+        <button type="reset">Hủy</button>
+    </form>
+
+</div>
+
